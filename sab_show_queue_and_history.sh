@@ -39,4 +39,4 @@ echo "HISTORY"
 #lynx --dump $BASEURL"&mode=history" | python3 -m json.tool  | grep -B1 nzb_name | grep '"name"'
 URL=$BASEURL"&mode=history"
 echo $URL
-wget -o /dev/null -O- $URL | python -m json.tool  | grep -B1 nzb_name | grep '"name"'
+wget -o /dev/null -O- $URL | python -m json.tool  | grep -B1 -e  nzb_name -e fail_message | grep -e '"name"' -e fail_message
