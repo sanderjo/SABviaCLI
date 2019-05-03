@@ -28,7 +28,14 @@ BASEURL='http://127.0.0.1:8080/sabnzbd/api?output=json&apikey='
 BASEURL+="$APIKEY"
 
 echo "QUEUE"
-lynx --dump $BASEURL"&mode=queue" | python3 -m json.tool | grep filename
+#lynx --dump $BASEURL"&mode=queue" | python3 -m json.tool | grep filename
+URL=$BASEURL"&mode=queue"
+#echo $URL
+wget -o /dev/null -O- $URL | python3 -m json.tool | grep filename
+
 
 echo "HISTORY"
-lynx --dump $BASEURL"&mode=history" | python3 -m json.tool  | grep -B1 nzb_name | grep '"name"'
+#lynx --dump $BASEURL"&mode=history" | python3 -m json.tool  | grep -B1 nzb_name | grep '"name"'
+URL=$BASEURL"&mode=history"
+#echo $URL
+wget -o /dev/null -O- $URL | python3 -m json.tool  | grep -B1 nzb_name | grep '"name"'
