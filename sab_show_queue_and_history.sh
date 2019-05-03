@@ -4,7 +4,8 @@
 
 # Try to get APIKEY:
 # ... from the ini file
-APIKEY=$(awk '/^api_key/ { print $NF }'  ~/.sabnzbd/sabnzbd.ini)
+echo "Trying to find APIKEY via sabnzbd.ini"
+APIKEY=$(awk '/^api_key/ { print $NF }'  ~/.sabnzbd/sabnzbd.ini 2>/dev/null )
 if [ -n "$APIKEY" ]; then
   echo "API Key found via ini file:" $APIKEY
 else
