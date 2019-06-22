@@ -2,9 +2,11 @@
 
 A CLI tool (python3) to show the Queue and History of a local or remote SABnzbd. Useful if a WebGUI is not possible, for example if you only have access via SSH.
 
-Local: works if no WebGUI password is set, and also works if you as user are running SABnzbd (even with a password set)
-Remote: works if no WebGUI password is set
+- Local: works if no WebGUI password is set, and also works if you as user are running SABnzbd (even with a password set)
+- Remote: works if no WebGUI password is set
 
+
+### Example
 ```
 $ ./SAB_show_status.py 192.168.1.1 
 http://192.168.1.1:8080/sabnzbd/config/general/
