@@ -1,7 +1,6 @@
-# SABviaCLI
-SABnzbd via CLI
+# SAB_show_status
 
-A CLI tool to show the Queue and History of a local or remote SABnzbd. Useful if a WebGUI is not possible, for example if you only have access via SSH.
+A CLI tool (python3) to show the Queue and History of a local or remote SABnzbd. Useful if a WebGUI is not possible, for example if you only have access via SSH.
 
 ```
 $ ./SAB_show_status.py 192.168.1.1 
