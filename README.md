@@ -1,7 +1,7 @@
 # SABviaCLI
 SABnzbd via CLI
 
-A few notes and code snippets to read SABnzbd from the CLI. Useful if a WebGUI is not possible
+A few notes and code snippets to read SABnzbd from the CLI. Useful if a WebGUI is not possible, for example if you only have access via SSH.
 
 
 ### Get the API key from a running SABnzbd (which has no GUI password set!)
